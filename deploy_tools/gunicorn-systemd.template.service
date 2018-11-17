@@ -8,11 +8,7 @@ WorkingDirectory=/home/greg/sites/DOMAIN
 
 EnvironmentFile=/home/greg/sites/DOMAIN/.env
 
-ExecStart=/home/greg/sites/DOMAIN/virtualenv/bin/gunicorn \
-    --bind unix:/tmp/DOMAIN.socket \
-    --access-logfile access.log \
-    --error-logfile error.log \
-    superlists.wsgi:application
+ExecStart=/home/greg/sites/DOMAIN/virtualenv/bin/gunicorn --bind unix:/tmp/DOMAIN.socket superlists.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
