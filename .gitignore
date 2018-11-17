@@ -6,4 +6,4 @@ __pycache__
 ./static
 functional_tests/screendumps
 lenv
-
+.env
