@@ -1,5 +1,5 @@
 import random
-from fabric.contrib.files import exists
+from fabric.contrib.files import exists, append
 from fabric.api import cd, env, local, run
 
 REPO_URL = 'https://gregcodethem@bitbucket.org/gregcodethem/langato.git'
