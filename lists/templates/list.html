@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
-{% block header_text %}Your To-Do list{% endblock %}
+{% block header_text %}Your word list{% endblock %}
 
 {% block table %}
   <table id="id_list_table" class="table">
   </table>
 
   {% if list.owner %}
-    <p>List owner: <span id="id_list_owner">{{ list.owner.email }}</span><p>
+    <p>Word list owner: <span id="id_list_owner">{{ list.owner.email }}</span><p>
   {% endif %}
 {% endblock %}
 
