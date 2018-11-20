@@ -2,6 +2,7 @@ from selenium import webdriver
 from .base import FunctionalTest
 from .list_page import ListPage
 from .my_lists_page import MyListsPage
+import time
 
 
 def quit_if_possible(browser):
@@ -53,6 +54,7 @@ class SharingTest(FunctionalTest):
         ))
 
         # He adds an item to the list
+        list_page.wait_for_row_in_list_table('Get help', 1)
         list_page.add_list_item('Hi Edith!')
 
         # When Edith refreshes the page, she sees Oniciferous's addition

@@ -7,3 +7,5 @@ __pycache__
 functional_tests/screendumps
 lenv
 .env
+functional_tests/.env
+functional_tests/env.py

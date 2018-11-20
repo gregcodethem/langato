@@ -6,7 +6,7 @@ from django.core import mail
 from selenium.webdriver.common.keys import Keys
 
 from .base import FunctionalTest
-
+from .env import YAHOO_PASSWORD
 
 SUBJECT = 'Your login link for Superlists'
 
@@ -25,6 +25,7 @@ class LoginTest(FunctionalTest):
         inbox = poplib.POP3_SSL('pop.mail.yahoo.com')
         try:
             inbox.user(test_email)
+            #inbox.pass_(YAHOO_PASSWORD)
             inbox.pass_(os.environ['YAHOO_PASSWORD'])
             while time.time() - start < 60:
                 # get 10 newest messages
