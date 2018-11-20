@@ -25,8 +25,8 @@ class LoginTest(FunctionalTest):
         inbox = poplib.POP3_SSL('pop.mail.yahoo.com')
         try:
             inbox.user(test_email)
-            #inbox.pass_(YAHOO_PASSWORD)
-            inbox.pass_(os.environ['YAHOO_PASSWORD'])
+            inbox.pass_(YAHOO_PASSWORD)
+            #inbox.pass_(os.environ['YAHOO_PASSWORD'])
             while time.time() - start < 60:
                 # get 10 newest messages
                 count, _ = inbox.stat()

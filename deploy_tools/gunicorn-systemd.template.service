@@ -6,7 +6,10 @@ Restart=on-failure
 User=greg
 WorkingDirectory=/home/greg/sites/DOMAIN
 
-EnvironmentFile=/home/greg/sites/DOMAIN/.env
+Environment=DJANGO_DEBUG_FALSE=y
+Environment=DJANGO_SECRET_KEY=ENTER_DJANGO_SECRET_KEY_HERE
+Environment=SITENAME=DOMAIN
+Environment=EMAIL_PASSWORD=SEKRIT
 
 ExecStart=/home/greg/sites/DOMAIN/virtualenv/bin/gunicorn --bind unix:/tmp/DOMAIN.socket superlists.wsgi:application
 
