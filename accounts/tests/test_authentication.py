@@ -15,7 +15,7 @@ class AuthenticateTest(TestCase):
 
 
     def test_returns_new_user_with_correct_email_if_token_exists(self):
-        email = 'edith@example.com'
+        email = 'example@hotmail.com'
         token = Token.objects.create(email=email)
         user = PasswordlessAuthenticationBackend().authenticate(token.uid)
         new_user = User.objects.get(email=email)
@@ -23,7 +23,7 @@ class AuthenticateTest(TestCase):
 
 
     def test_returns_existing_user_with_correct_email_if_token_exists(self):
-        email = 'edith@example.com'
+        email = 'example@hotmail.com'
         existing_user = User.objects.create(email=email)
         token = Token.objects.create(email=email)
         user = PasswordlessAuthenticationBackend().authenticate(token.uid)

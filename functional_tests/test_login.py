@@ -49,9 +49,9 @@ class LoginTest(FunctionalTest):
         # and notices a "Log in" section in the navbar for the first time
         # It's telling her to enter her email address, so she does
         if self.staging_server:
-            test_email = 'edith.testuser@yahoo.com'
+            test_email = 'langato@yahoo.com'
         else:
-            test_email = 'edith@example.com'
+            test_email = 'langatocat@hotmail.com'
 
         self.browser.get(self.live_server_url)
         self.browser.find_element_by_name('email').send_keys(test_email)
