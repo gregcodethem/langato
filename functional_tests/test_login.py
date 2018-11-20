@@ -8,7 +8,7 @@ from selenium.webdriver.common.keys import Keys
 from .base import FunctionalTest
 from .env import YAHOO_PASSWORD
 
-SUBJECT = 'Your login link for Superlists'
+SUBJECT = 'Your login link for Langato'
 
 
 class LoginTest(FunctionalTest):
