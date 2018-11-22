@@ -9,10 +9,28 @@
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/base.css" rel="stylesheet">
     <link href="/static/bootstrap/css/styles.css" rel="stylesheet">
+    <link href="/static/background.css" rel="stylesheet">
+
   </head>
 
   <body>
+
+<div class="waveWrapper waveAnimation">
+  <div class="waveWrapperInner bgTop">
+    <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+  </div>
+  <div class="waveWrapperInner bgMiddle">
+    <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+  </div>
+  <div class="waveWrapperInner bgBottom">
+    <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+  </div>
+</div>
+
+
+
     <div class="container">
+      
       <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">Langato</a>
@@ -28,7 +46,7 @@
             <form class="navbar-form navbar-right"
                   method="POST"
                   action="{% url 'send_login_email' %}">
-              <span>Enter email to log in:</span>
+              <p>Enter email to log in:</p>
               <input class="form-control" name="email" type="text" />
               {% csrf_token %}
             </form>
@@ -87,10 +105,13 @@
         </div>
       </div>
     </div>
+
+
     <script src="/static/jquery-3.1.1.min.js"></script>
     <script src="/static/bootstrap/js/popper.min.js"></script>
     <script src="/static/list.js"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/background.js"></script>
 
     {% block scripts %}
       <script>

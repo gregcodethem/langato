@@ -1,7 +1,3 @@
-$bg-color: red; 
-
-
-
 
 
 // These are the defaults, but you can override any values
@@ -11,6 +7,6 @@ $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier Ne
 $font-family-base:       $font-family-monospace !default;
 
 body {
-    background: $bg-color;
     font-family: $font-family-base;
 }
+
