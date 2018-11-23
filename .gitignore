@@ -9,3 +9,8 @@ lenv
 .env
 functional_tests/.env
 functional_tests/env.py
+package.json
+package-lock.json
+node_modules/
+lists/.babelrc
+

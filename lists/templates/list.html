@@ -3,38 +3,38 @@
 {% block header_text %}Your word list{% endblock %}
 
 {% block table %}
-  <table id="id_list_table" class="table">
-  </table>
+  <div class="card jumbotron">
+    <div class = "card-body card-wordlist">
+      <table id="id_list_table" class="table">
+      </table>
 
-  {% if list.owner %}
-    <p>Word list owner: <span id="id_list_owner">{{ list.owner.email }}</span><p>
-  {% endif %}
+      {% if list.owner %}
+        <p>Word list owner: <span id="id_list_owner">{{ list.owner.email }}</span><p>
+      {% endif %}
+    </div>
+  </div>
 {% endblock %}
 
 {% block extra_content %}
-  <div class="row">
+  <div class="card jumbotron">
+    <div class="card-body text-center">
+      <div class="row">
 
-    <div class="col-md-6">
-      <h3>Shared with</h3>
-      <ul>
-        {% for sharee in list.shared_with.all %}
-          <li class="list-sharee">{{ sharee.email }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    <div class="col-md-3">
-      <h3>Share this list:</h3>
-      <form class="form-inline" method="POST" action="{% url 'share_list' list.id %}" >
-        {% csrf_token %}
-        <input name="sharee" placeholder="your-friend@example.com" />
-      </form>
-        <h3>Shared with</h3>
-        <ul>
-            {% for sharee in list.shared_with.all %}
-              <li class="list-sharee">{{ sharee.email }}</li>
-            {% endfor %}
-        </ul>
+        <div class="col">
+          <h4>Share this list:</h4>
+          <form class="form-inline" method="POST" action="{% url 'share_list' list.id %}" >
+            {% csrf_token %}
+            <input name="sharee" placeholder="your-friend@example.com" />
+          </form>
+            <h3>Shared with</h3>
+            <ul>
+                {% for sharee in list.shared_with.all %}
+                  <li class="list-sharee">{{ sharee.email }}</li>
+                {% endfor %}
+            </ul>
+            
+        </div>
+      </div>
     </div>
   </div>
 {% endblock %}
