@@ -13,4 +13,7 @@ package.json
 package-lock.json
 node_modules/
 lists/.babelrc
-
+tmp
+public
+passenger_wsgi.py
+*.DS_Store
