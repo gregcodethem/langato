@@ -1,5 +1,7 @@
 Base for the Langato website, which will help users learn vocabulary in the languages they're learning. At present the website can record word lists for different users, and these users can share these word lists with other users.
 
+An alpha version of this website can be seen at: www.testing.langato.com
+
 Future Functionality
 
     Enable deletion of list entries
