@@ -19,10 +19,12 @@ Notes: You may need to change the python -m venv env command, dependent on how y
 
 
 To be able to run the functional tests 
+	
 	download geckodriver from:https://github.com/mozilla/geckodriver/releases
 	save it into: env/bin
 
 Then you will be able to run all the tests with the command:
+	
 	python manage.py test
 
 
@@ -31,7 +33,7 @@ To set up SASS and gulp in order to make changes to the css:
 	install node
 	in root folder: npm init -y npm install gulp browser-sync gulp-sass --save-dev npm install bootstrap jquery popper.js --save
 
-`Then to make changes through SASS:
+Then to make changes through SASS:
 
 	Make changes to: styles.scss file inside of the /src/scss/ folder
 	run gulp in lists folder
