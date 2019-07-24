@@ -27,11 +27,9 @@ Then you will be able to run all the tests with the command:
 To set up SASS and gulp in order to make changes to the css:
 
 	install node
-
 	in root folder: npm init -y npm install gulp browser-sync gulp-sass --save-dev npm install bootstrap jquery popper.js --save
 
-	Then to make changes through SASS:
+`Then to make changes through SASS:
 
 	Make changes to: styles.scss file inside of the /src/scss/ folder
-
 	run gulp in lists folder
