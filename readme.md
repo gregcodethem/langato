@@ -15,6 +15,8 @@ To install on your local machine, make sure you have python 3.6 installed, then 
 	source env/bin/activate
 	pip install -r requirements.txt
 
+Notes: You may need to change the python -m venv env command, dependent on how you normally create virtual environments.  You may also need to change the source env/bin/activate command if you are on Windows.
+
 
 To be able to run the functional tests 
 	download geckodriver from:https://github.com/mozilla/geckodriver/releases
