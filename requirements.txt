@@ -1,4 +1,4 @@
-django==1.11
+django==1.11.29
 gunicorn==19.7.1
 djangorestframework==3.6.2
 selenium<4
