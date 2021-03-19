@@ -1,5 +1,5 @@
 django==1.11
 gunicorn==19.7.1
-djangorestframework==3.6.2
+djangorestframework==3.11.2
 selenium<4
 Fabric3<1.15
